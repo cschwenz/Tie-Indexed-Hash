@@ -2,7 +2,7 @@
 # NOTE: The ": Large" tag denotes hash datasets containing 2500 key/value pairs,
 # while the ": Small" tag denotes hash datasets containing 25 key/value pairs.
 #
-# The below data was generated on 2011-06-11 @ 18:55:21; the machine doing the
+# The below data was generated on 2011-06-07 @ 18:55:21; the machine doing the
 # benchmarking was equipped with an AMD Phenom II X4 955 @ 3.2 GHz and 8.00 GB
 # of installed memory.
 #
