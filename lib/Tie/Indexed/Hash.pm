@@ -93,7 +93,9 @@ Version 0.02
 =head1 SYNOPSIS
 
 If you do not need the OO interface of C<Tie::IxHash>, then strongly consider
-replacing C<Tie::IxHash> with this module.
+replacing C<Tie::IxHash> with this module because C<Tie::Indexed::Hash> runs
+between 14% and 33% faster for "normal" operations (see the BENCHMARKS file for
+the details, in particular the "Clear/Reassign" benchmarks).
 
     use Tie::Indexed::Hash;
     
@@ -243,14 +245,7 @@ L<http://search.cpan.org/dist/Tie-Indexed-Hash/>
 
 =head1 ACKNOWLEDGEMENTS
 
-S<   > What value, then, can the man of affairs get from what he earns?S< > I
-have observed the business that God gave man to be concerned with: He brings
-everything to pass precisely at its time.S< > He also puts eternity in their
-mind, but without man ever guessing (from first to last) all the things that God
-brings to pass.S< > Thus I realized that the only worthwhile thing there is for
-them is to enjoy themselves and do what is good in their lifetime; also, that
-whenever a man does eat and drink and get enjoyment out of all his wealth, it
-is a gift of God.
+I would like to thank Richard Balint for the original idea and concept code.
 
 
 =head1 LICENSE AND COPYRIGHT

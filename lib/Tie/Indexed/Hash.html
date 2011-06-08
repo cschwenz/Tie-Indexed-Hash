@@ -1,0 +1,246 @@
+<?xml version="1.0" ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<title>Tie::Indexed::Hash</title>
+<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+<link rev="made" href="mailto:" />
+</head>
+
+<body style="background-color: white">
+<table border="0" width="100%" cellspacing="0" cellpadding="3">
+<tr><td class="block" style="background-color: #cccccc" valign="middle">
+<big><strong><span class="block">&nbsp;Tie::Indexed::Hash</span></strong></big>
+</td></tr>
+</table>
+
+
+<!-- INDEX BEGIN -->
+<div name="index">
+<p><a name="__index__"></a></p>
+
+<ul>
+
+	<li><a href="#name">NAME</a></li>
+	<li><a href="#version">VERSION</a></li>
+	<li><a href="#synopsis">SYNOPSIS</a></li>
+	<li><a href="#subroutines_methods">SUBROUTINES/METHODS</a></li>
+	<ul>
+
+		<li><a href="#tiehash"><code>TIEHASH</code></a></li>
+		<li><a href="#fetch"><code>FETCH</code></a></li>
+		<li><a href="#store"><code>STORE</code></a></li>
+		<li><a href="#delete"><code>DELETE</code></a></li>
+		<li><a href="#clear"><code>CLEAR</code></a></li>
+		<li><a href="#exists"><code>EXISTS</code></a></li>
+		<li><a href="#firstkey"><code>FIRSTKEY</code></a></li>
+		<li><a href="#nextkey"><code>NEXTKEY</code></a></li>
+		<li><a href="#scalar"><code>SCALAR</code></a></li>
+		<li><a href="#destroy"><code>DESTROY</code></a></li>
+		<li><a href="#untie"><code>UNTIE</code></a></li>
+	</ul>
+
+	<li><a href="#author">AUTHOR</a></li>
+	<li><a href="#bugs">BUGS</a></li>
+	<li><a href="#support">SUPPORT</a></li>
+	<li><a href="#acknowledgements">ACKNOWLEDGEMENTS</a></li>
+	<li><a href="#license_and_copyright">LICENSE AND COPYRIGHT</a></li>
+</ul>
+
+<hr name="index" />
+</div>
+<!-- INDEX END -->
+
+<p>
+<a href="#__index__"><small>Back to top</small></a>
+</p>
+<hr />
+<h1><a name="name">NAME</a></h1>
+<p>Tie::Indexed::Hash - A tweaked version of the venerable Tie::IxHash.</p>
+<p>
+<a href="#__index__"><small>Back to top</small></a>
+</p>
+<hr />
+<h1><a name="version">VERSION</a></h1>
+<p>Version 0.02</p>
+<p>
+<a href="#__index__"><small>Back to top</small></a>
+</p>
+<hr />
+<h1><a name="synopsis">SYNOPSIS</a></h1>
+<p>If you do not need the OO interface of <code>Tie::IxHash</code>, then strongly consider
+replacing <code>Tie::IxHash</code> with this module because <code>Tie::Indexed::Hash</code> runs
+between 14% and 33% faster for &quot;normal&quot; operations (see the BENCHMARKS file for
+the details, in particular the &quot;Clear/Reassign&quot; benchmarks).</p>
+<pre>
+    use Tie::Indexed::Hash;
+    
+    my %indexed;
+    tie %indexed, 'Tie::Indexed::Hash';</pre>
+<p>
+<a href="#__index__"><small>Back to top</small></a>
+</p>
+<hr />
+<h1><a name="subroutines_methods">SUBROUTINES/METHODS</a></h1>
+<p>These are the standard <code>TIEHASH</code> methods required by Perl.  You may use them
+directly if you really want to.</p>
+<p>
+</p>
+<h2><a name="tiehash"><code>TIEHASH</code></a></h2>
+<p>Initializes this tied hash.</p>
+<p>
+</p>
+<h2><a name="fetch"><code>FETCH</code></a></h2>
+<p>Returns the value associated with the given key or <code>undef</code> if the key does not
+exist.</p>
+<p>
+</p>
+<h2><a name="store"><code>STORE</code></a></h2>
+<p>Save the given key/value pair in this tied hash.</p>
+<p>
+</p>
+<h2><a name="delete"><code>DELETE</code></a></h2>
+<p>Removes a key from this tied hash and returns its value or undef if the key does
+not exist.</p>
+<p>
+</p>
+<h2><a name="clear"><code>CLEAR</code></a></h2>
+<p>Sets this tied hash back to its initial starting conditions.</p>
+<p>
+</p>
+<h2><a name="exists"><code>EXISTS</code></a></h2>
+<p>Returns true if the given key exists, false otherwise.</p>
+<p>
+</p>
+<h2><a name="firstkey"><code>FIRSTKEY</code></a></h2>
+<p>Initialize the key counter and return the first key or undef if there are no
+keys in this tied hash.</p>
+<p>
+</p>
+<h2><a name="nextkey"><code>NEXTKEY</code></a></h2>
+<p>Return all subsequent keys after the first key; returns undef at the end of the
+key list.</p>
+<p>
+</p>
+<h2><a name="scalar"><code>SCALAR</code></a></h2>
+<p>Returns a scalar representation of this tied hash.</p>
+<p>
+</p>
+<h2><a name="destroy"><code>DESTROY</code></a></h2>
+<p>Unused; we have no need to do any cleanup immediately before this tied hash is
+destroyed.</p>
+<p>
+</p>
+<h2><a name="untie"><code>UNTIE</code></a></h2>
+<p>Unused; we have no need to do any cleanup immediately before this tied hash is
+unbound.</p>
+<p>
+<a href="#__index__"><small>Back to top</small></a>
+</p>
+<hr />
+<h1><a name="author">AUTHOR</a></h1>
+<p>Calvin Schwenzfeier, <code>&lt;calvin DOT schwenzfeier a~t gmail dotCOM&gt;</code></p>
+<p>
+<a href="#__index__"><small>Back to top</small></a>
+</p>
+<hr />
+<h1><a name="bugs">BUGS</a></h1>
+<p>Please report any bugs or feature requests through GitHub's issue tracker web
+interface at <a href="http://github.com/cschwenz/Tie-Indexed-Hash/issues">http://github.com/cschwenz/Tie-Indexed-Hash/issues</a>.</p>
+<p>
+<a href="#__index__"><small>Back to top</small></a>
+</p>
+<hr />
+<h1><a name="support">SUPPORT</a></h1>
+<p>You can find documentation for this module with the perldoc command.</p>
+<pre>
+    perldoc Tie::Indexed::Hash</pre>
+<p>You can also look for information at:</p>
+<ul>
+<li><strong><a name="docs" class="item">The <code>Tie::Indexed::Hash</code> online docs (hosted on GitHub):</a></strong>
+
+<p><a href="http://cschwenz.github.com/Tie-Indexed-Hash/Tie/Indexed/Hash.html">http://cschwenz.github.com/Tie-Indexed-Hash/Tie/Indexed/Hash.html</a></p>
+</li>
+<li><strong><a name="github_s_issue_tracker" class="item">GitHub's issue tracker:</a></strong>
+
+<p><a href="http://github.com/cschwenz/Tie-Indexed-Hash/issues">http://github.com/cschwenz/Tie-Indexed-Hash/issues</a></p>
+</li>
+<li><strong><a name="wiki" class="item">The <code>Tie::Indexed::Hash</code> wiki (hosted on GitHub):</a></strong>
+
+<p><a href="http://wiki.github.com/cschwenz/Tie-Indexed-Hash">http://wiki.github.com/cschwenz/Tie-Indexed-Hash</a></p>
+</li>
+<li><strong><a name="code" class="item">Source code (hosted on GitHub):</a></strong>
+
+<p><a href="http://github.com/cschwenz/Tie-Indexed-Hash">http://github.com/cschwenz/Tie-Indexed-Hash</a></p>
+</li>
+</ul>
+<p>
+<a href="#__index__"><small>Back to top</small></a>
+</p>
+<hr />
+<h1><a name="acknowledgements">ACKNOWLEDGEMENTS</a></h1>
+<p>I would like to thank Richard Balint for the original idea and concept code.</p>
+<p>
+<a href="#__index__"><small>Back to top</small></a>
+</p>
+<hr />
+<h1><a name="license_and_copyright">LICENSE AND COPYRIGHT</a></h1>
+<p>Copyright 2010 Calvin Schwenzfeier.</p>
+<p>This program is free software; you can redistribute it and/or modify it under
+the terms of either:</p>
+<dl>
+<dt><strong><a name="a" class="item">a)</a></strong></dt>
+
+<dd>
+<p>the GNU General Public License [<a href="http://dev.perl.org/licenses/gpl1.html">http://dev.perl.org/licenses/gpl1.html</a>] as published by the Free Software Foundation [<a href="http://www.fsf.org/">http://www.fsf.org/</a>]; either version 1 [<a href="http://dev.perl.org/licenses/gpl1.html">http://dev.perl.org/licenses/gpl1.html</a>], or (at your option) any later version [<a href="http://www.fsf.org/licensing/licenses/#GNUGPL">http://www.fsf.org/licensing/licenses/#GNUGPL</a>], or</p>
+</dd>
+<dt><strong><a name="b" class="item">b)</a></strong></dt>
+
+<dd>
+<p>the &quot;Artistic License&quot; [<a href="http://dev.perl.org/licenses/artistic.html">http://dev.perl.org/licenses/artistic.html</a>].</p>
+</dd>
+</dl>
+<pre>
+    
+    For those of you that choose to use the GNU General Public License, my
+    interpretation of the GNU General Public License is that no Perl script
+    falls under the terms of the GPL unless you explicitly put said script under
+    the terms of the GPL yourself.
+    
+    Furthermore, any object code linked with perl does not automatically fall
+    under the terms of the GPL, provided such object code only adds definitions
+    of subroutines and variables, and does not otherwise impair the resulting
+    interpreter from executing any standard Perl script. I consider linking in C
+    subroutines in this manner to be the moral equivalent of defining
+    subroutines in the Perl language itself. You may sell such an object file as
+    proprietary provided that you provide or offer to provide the Perl source,
+    as specified by the GNU General Public License. (This is merely an alternate
+    way of specifying input to the program.) You may also sell a binary produced
+    by the dumping of a running Perl script that belongs to you, provided that
+    you provide or offer to provide the Perl source as specified by the GPL.
+    (The fact that a Perl interpreter and your code are in the same binary file
+    is, in this case, a form of mere aggregation.)
+    
+    This is my interpretation of the GPL. If you still have concerns or
+    difficulties understanding my intent, feel free to contact me. Of course,
+    the Artistic License spells all this out for your protection, so you may
+    prefer to use that.
+    
+    -- Larry Wall</pre>
+<p>See <a href="http://dev.perl.org/licenses/">http://dev.perl.org/licenses/</a> for more information.</p>
+<p>Voir <a href="http://dev.perl.org/licenses/">http://dev.perl.org/licenses/</a> pour plus d'information.</p>
+<p>Ver <a href="http://dev.perl.org/licenses/">http://dev.perl.org/licenses/</a> para mÃ¡s informaciÃ³n.</p>
+<p>Ð¡Ð¼. <a href="http://dev.perl.org/licenses/">http://dev.perl.org/licenses/</a> Ð—Ð° Ð´Ð¾Ð¿Ð¾Ð»Ð½Ð¸Ñ‚ÐµÐ»ÑŒÐ½Ð¾Ð¹ Ð¸Ð½Ñ„Ð¾Ñ€Ð¼Ð°Ñ†Ð¸ÐµÐ¹.</p>
+<p>Se <a href="http://dev.perl.org/licenses/">http://dev.perl.org/licenses/</a> kwa taarifa zaidi.</p>
+<p>FÃ©ach <a href="http://dev.perl.org/licenses/">http://dev.perl.org/licenses/</a> le haghaidh tuilleadh eolais.</p>
+<p>Se <a href="http://dev.perl.org/licenses/">http://dev.perl.org/licenses/</a> fÃ¶r mer information.</p>
+<p><a href="#__index__"><small>Back to top</small></a></p>
+<table border="0" width="100%" cellspacing="0" cellpadding="3">
+<tr><td class="block" style="background-color: #cccccc" valign="middle">
+<big><strong><span class="block">&nbsp;Tie::Indexed::Hash</span></strong></big>
+</td></tr>
+</table>
+
+</body>
+
+</html>
