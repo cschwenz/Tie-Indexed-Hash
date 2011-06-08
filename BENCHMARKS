@@ -1,0 +1,318 @@
+#
+# NOTE: The ": Large" tag denotes hash datasets containing 2500 key/value pairs,
+# while the ": Small" tag denotes hash datasets containing 25 key/value pairs.
+#
+# The below data was generated on 2011-06-11 @ 18:55:21; the machine doing the
+# benchmarking was equipped with an AMD Phenom II X4 955 @ 3.2 GHz and 8.00 GB
+# of installed memory.
+#
+
+
+ ==============================================================================
+   [Increment : Empty]
+ ------------------------------------------------------------------------------
+Benchmark: timing 1000000 iterations of PerlHash, Tie::Indexed::Hash, Tie::IxHash...
+  PerlHash: 2.98906 wallclock secs ( 2.980 usr +  0.000 sys =  2.980 CPU) @ 335570.470/s (n=1000000)
+Tie::Indexed::Hash: 8.25367 wallclock secs ( 8.221 usr +  0.031 sys =  8.252 CPU) @ 121182.744/s (n=1000000)
+Tie::IxHash: 9.67007 wallclock secs ( 9.609 usr +  0.031 sys =  9.640 CPU) @ 103734.440/s (n=1000000)
+ ------------------------------------------------------------------------------
+                       Rate      Tie::IxHash Tie::Indexed::Hash         PerlHash
+Tie::IxHash        103734/s               --               -14%             -69%
+Tie::Indexed::Hash 121183/s              17%                 --             -64%
+PerlHash           335570/s             223%               177%               --
+ ==============================================================================
+
+ ==============================================================================
+   [Increment : Large]
+ ------------------------------------------------------------------------------
+Benchmark: timing 1000000 iterations of PerlHash, Tie::Indexed::Hash, Tie::IxHash...
+  PerlHash: 3.18453 wallclock secs ( 3.183 usr +  0.000 sys =  3.183 CPU) @ 314169.023/s (n=1000000)
+Tie::Indexed::Hash: 8.47213 wallclock secs ( 8.408 usr +  0.062 sys =  8.470 CPU) @ 118063.754/s (n=1000000)
+Tie::IxHash: 9.69912 wallclock secs ( 9.704 usr +  0.000 sys =  9.704 CPU) @ 103050.289/s (n=1000000)
+ ------------------------------------------------------------------------------
+                       Rate      Tie::IxHash Tie::Indexed::Hash         PerlHash
+Tie::IxHash        103050/s               --               -13%             -67%
+Tie::Indexed::Hash 118064/s              15%                 --             -62%
+PerlHash           314169/s             205%               166%               --
+ ==============================================================================
+
+ ==============================================================================
+   [Increment : Small]
+ ------------------------------------------------------------------------------
+Benchmark: timing 1000000 iterations of PerlHash, Tie::Indexed::Hash, Tie::IxHash...
+  PerlHash: 3.16831 wallclock secs ( 3.167 usr +  0.000 sys =  3.167 CPU) @ 315756.236/s (n=1000000)
+Tie::Indexed::Hash: 8.46313 wallclock secs ( 8.455 usr +  0.000 sys =  8.455 CPU) @ 118273.211/s (n=1000000)
+Tie::IxHash: 9.84314 wallclock secs ( 9.844 usr +  0.000 sys =  9.844 CPU) @ 101584.722/s (n=1000000)
+ ------------------------------------------------------------------------------
+                       Rate      Tie::IxHash Tie::Indexed::Hash         PerlHash
+Tie::IxHash        101585/s               --               -14%             -68%
+Tie::Indexed::Hash 118273/s              16%                 --             -63%
+PerlHash           315756/s             211%               167%               --
+ ==============================================================================
+
+ ==============================================================================
+   [Insertion : Empty]
+ ------------------------------------------------------------------------------
+Benchmark: timing 1000000 iterations of PerlHash, Tie::Indexed::Hash, Tie::IxHash...
+  PerlHash: 3.1508 wallclock secs ( 3.105 usr +  0.047 sys =  3.152 CPU) @ 317258.883/s (n=1000000)
+Tie::Indexed::Hash: 7.10013 wallclock secs ( 7.098 usr +  0.000 sys =  7.098 CPU) @ 140884.756/s (n=1000000)
+Tie::IxHash: 7.93971 wallclock secs ( 7.926 usr +  0.000 sys =  7.926 CPU) @ 126167.045/s (n=1000000)
+ ------------------------------------------------------------------------------
+                       Rate      Tie::IxHash Tie::Indexed::Hash         PerlHash
+Tie::IxHash        126167/s               --               -10%             -60%
+Tie::Indexed::Hash 140885/s              12%                 --             -56%
+PerlHash           317259/s             151%               125%               --
+ ==============================================================================
+
+ ==============================================================================
+   [Insertion : Large]
+ ------------------------------------------------------------------------------
+Benchmark: timing 1000000 iterations of PerlHash, Tie::Indexed::Hash, Tie::IxHash...
+  PerlHash: 3.15397 wallclock secs ( 3.135 usr +  0.016 sys =  3.151 CPU) @ 317359.568/s (n=1000000)
+Tie::Indexed::Hash: 7.14844 wallclock secs ( 7.130 usr +  0.016 sys =  7.146 CPU) @ 139938.427/s (n=1000000)
+Tie::IxHash: 7.9933 wallclock secs ( 7.972 usr +  0.015 sys =  7.987 CPU) @ 125203.456/s (n=1000000)
+ ------------------------------------------------------------------------------
+                       Rate      Tie::IxHash Tie::Indexed::Hash         PerlHash
+Tie::IxHash        125203/s               --               -11%             -61%
+Tie::Indexed::Hash 139938/s              12%                 --             -56%
+PerlHash           317360/s             153%               127%               --
+ ==============================================================================
+
+ ==============================================================================
+   [Insertion : Small]
+ ------------------------------------------------------------------------------
+Benchmark: timing 1000000 iterations of PerlHash, Tie::Indexed::Hash, Tie::IxHash...
+  PerlHash: 3.19216 wallclock secs ( 3.198 usr +  0.000 sys =  3.198 CPU) @ 312695.435/s (n=1000000)
+Tie::Indexed::Hash: 7.11493 wallclock secs ( 7.083 usr +  0.016 sys =  7.099 CPU) @ 140864.911/s (n=1000000)
+Tie::IxHash: 8.02857 wallclock secs ( 7.956 usr +  0.062 sys =  8.018 CPU) @ 124719.381/s (n=1000000)
+ ------------------------------------------------------------------------------
+                       Rate      Tie::IxHash Tie::Indexed::Hash         PerlHash
+Tie::IxHash        124719/s               --               -11%             -60%
+Tie::Indexed::Hash 140865/s              13%                 --             -55%
+PerlHash           312695/s             151%               122%               --
+ ==============================================================================
+
+ ==============================================================================
+   [Retrieval : Large]
+ ------------------------------------------------------------------------------
+Benchmark: timing 1000000 iterations of PerlHash, Tie::Indexed::Hash, Tie::IxHash...
+  PerlHash: 2.3177 wallclock secs ( 2.325 usr +  0.000 sys =  2.325 CPU) @ 430107.527/s (n=1000000)
+Tie::Indexed::Hash: 5.09929 wallclock secs ( 5.101 usr +  0.000 sys =  5.101 CPU) @ 196039.992/s (n=1000000)
+Tie::IxHash: 5.35996 wallclock secs ( 5.366 usr +  0.000 sys =  5.366 CPU) @ 186358.554/s (n=1000000)
+ ------------------------------------------------------------------------------
+                       Rate      Tie::IxHash Tie::Indexed::Hash         PerlHash
+Tie::IxHash        186359/s               --                -5%             -57%
+Tie::Indexed::Hash 196040/s               5%                 --             -54%
+PerlHash           430108/s             131%               119%               --
+ ==============================================================================
+
+ ==============================================================================
+   [Retrieval : Small]
+ ------------------------------------------------------------------------------
+Benchmark: timing 1000000 iterations of PerlHash, Tie::Indexed::Hash, Tie::IxHash...
+  PerlHash: 2.30856 wallclock secs ( 2.308 usr +  0.000 sys =  2.308 CPU) @ 433275.563/s (n=1000000)
+Tie::Indexed::Hash: 5.09136 wallclock secs ( 5.086 usr +  0.000 sys =  5.086 CPU) @ 196618.168/s (n=1000000)
+Tie::IxHash: 5.39935 wallclock secs ( 5.397 usr +  0.000 sys =  5.397 CPU) @ 185288.123/s (n=1000000)
+ ------------------------------------------------------------------------------
+                       Rate      Tie::IxHash Tie::Indexed::Hash         PerlHash
+Tie::IxHash        185288/s               --                -6%             -57%
+Tie::Indexed::Hash 196618/s               6%                 --             -55%
+PerlHash           433276/s             134%               120%               --
+ ==============================================================================
+
+ ==============================================================================
+   [Clear/Reassign : Large]
+ ------------------------------------------------------------------------------
+Benchmark: timing 100 iterations of PerlHash, Tie::Indexed::Hash, Tie::IxHash...
+  PerlHash: 1.36362 wallclock secs ( 1.357 usr +  0.000 sys =  1.357 CPU) @ 73.692/s (n=100)
+Tie::Indexed::Hash: 2.59934 wallclock secs ( 2.590 usr +  0.000 sys =  2.590 CPU) @ 38.610/s (n=100)
+Tie::IxHash: 193.138 wallclock secs (193.067 usr +  0.015 sys = 193.082 CPU) @  0.518/s (n=100)
+ ------------------------------------------------------------------------------
+                      Rate      Tie::IxHash Tie::Indexed::Hash          PerlHash
+Tie::IxHash        0.518/s               --               -99%              -99%
+Tie::Indexed::Hash  38.6/s            7355%                 --              -48%
+PerlHash            73.7/s           14129%                91%                --
+ ==============================================================================
+
+ ==============================================================================
+   [Clear/Reassign : Small]
+ ------------------------------------------------------------------------------
+Benchmark: timing 20000 iterations of PerlHash, Tie::Indexed::Hash, Tie::IxHash...
+  PerlHash: 2.02787 wallclock secs ( 2.028 usr +  0.000 sys =  2.028 CPU) @ 9861.933/s (n=20000)
+Tie::Indexed::Hash: 4.09312 wallclock secs ( 4.087 usr +  0.000 sys =  4.087 CPU) @ 4893.565/s (n=20000)
+Tie::IxHash: 10.0485 wallclock secs (10.046 usr +  0.000 sys = 10.046 CPU) @ 1990.842/s (n=20000)
+ ------------------------------------------------------------------------------
+                     Rate       Tie::IxHash Tie::Indexed::Hash          PerlHash
+Tie::IxHash        1991/s                --               -59%              -80%
+Tie::Indexed::Hash 4894/s              146%                 --              -50%
+PerlHash           9862/s              395%               102%                --
+ ==============================================================================
+
+ ==============================================================================
+   [Exists : Large]
+ ------------------------------------------------------------------------------
+Benchmark: timing 1000000 iterations of PerlHash, Tie::Indexed::Hash, Tie::IxHash...
+  PerlHash: 2.33216 wallclock secs ( 2.340 usr +  0.000 sys =  2.340 CPU) @ 427350.427/s (n=1000000)
+Tie::Indexed::Hash: 5.09957 wallclock secs ( 5.101 usr +  0.000 sys =  5.101 CPU) @ 196039.992/s (n=1000000)
+Tie::IxHash: 5.10472 wallclock secs ( 5.101 usr +  0.000 sys =  5.101 CPU) @ 196039.992/s (n=1000000)
+ ------------------------------------------------------------------------------
+                       Rate      Tie::IxHash Tie::Indexed::Hash         PerlHash
+Tie::IxHash        196040/s               --                 0%             -54%
+Tie::Indexed::Hash 196040/s               0%                 --             -54%
+PerlHash           427350/s             118%               118%               --
+ ==============================================================================
+
+ ==============================================================================
+   [Exists : Small]
+ ------------------------------------------------------------------------------
+Benchmark: timing 1000000 iterations of PerlHash, Tie::Indexed::Hash, Tie::IxHash...
+  PerlHash: 2.33739 wallclock secs ( 2.340 usr +  0.000 sys =  2.340 CPU) @ 427350.427/s (n=1000000)
+Tie::Indexed::Hash: 5.00926 wallclock secs ( 5.009 usr +  0.000 sys =  5.009 CPU) @ 199640.647/s (n=1000000)
+Tie::IxHash: 4.98913 wallclock secs ( 4.991 usr +  0.000 sys =  4.991 CPU) @ 200360.649/s (n=1000000)
+ ------------------------------------------------------------------------------
+                       Rate Tie::Indexed::Hash      Tie::IxHash         PerlHash
+Tie::Indexed::Hash 199641/s                 --              -0%             -53%
+Tie::IxHash        200361/s                 0%               --             -53%
+PerlHash           427350/s               114%             113%               --
+ ==============================================================================
+
+ ==============================================================================
+   [Exists/Delete : Large]
+ ------------------------------------------------------------------------------
+Benchmark: timing 1000000 iterations of PerlHash, Tie::Indexed::Hash, Tie::IxHash...
+  PerlHash: 2.36126 wallclock secs ( 2.355 usr +  0.000 sys =  2.355 CPU) @ 424628.450/s (n=1000000)
+Tie::Indexed::Hash: 5.31464 wallclock secs ( 5.320 usr +  0.000 sys =  5.320 CPU) @ 187969.925/s (n=1000000)
+Tie::IxHash: 5.19906 wallclock secs ( 5.210 usr +  0.000 sys =  5.210 CPU) @ 191938.580/s (n=1000000)
+ ------------------------------------------------------------------------------
+                       Rate Tie::Indexed::Hash      Tie::IxHash         PerlHash
+Tie::Indexed::Hash 187970/s                 --              -2%             -56%
+Tie::IxHash        191939/s                 2%               --             -55%
+PerlHash           424628/s               126%             121%               --
+ ==============================================================================
+
+ ==============================================================================
+   [Exists/Delete : Small]
+ ------------------------------------------------------------------------------
+Benchmark: timing 1000000 iterations of PerlHash, Tie::Indexed::Hash, Tie::IxHash...
+  PerlHash: 2.28547 wallclock secs ( 2.277 usr +  0.000 sys =  2.277 CPU) @ 439174.352/s (n=1000000)
+Tie::Indexed::Hash: 5.05517 wallclock secs ( 5.055 usr +  0.000 sys =  5.055 CPU) @ 197823.937/s (n=1000000)
+Tie::IxHash: 5.01639 wallclock secs ( 5.007 usr +  0.000 sys =  5.007 CPU) @ 199720.391/s (n=1000000)
+ ------------------------------------------------------------------------------
+                       Rate Tie::Indexed::Hash      Tie::IxHash         PerlHash
+Tie::Indexed::Hash 197824/s                 --              -1%             -55%
+Tie::IxHash        199720/s                 1%               --             -55%
+PerlHash           439174/s               122%             120%               --
+ ==============================================================================
+
+ ==============================================================================
+   [Exists/Defined : Large]
+ ------------------------------------------------------------------------------
+Benchmark: timing 1000000 iterations of PerlHash, Tie::Indexed::Hash, Tie::IxHash...
+  PerlHash: 2.34842 wallclock secs ( 2.341 usr +  0.000 sys =  2.341 CPU) @ 427167.877/s (n=1000000)
+Tie::Indexed::Hash: 5.14048 wallclock secs ( 5.148 usr +  0.000 sys =  5.148 CPU) @ 194250.194/s (n=1000000)
+Tie::IxHash: 5.07164 wallclock secs ( 5.069 usr +  0.000 sys =  5.069 CPU) @ 197277.570/s (n=1000000)
+ ------------------------------------------------------------------------------
+                       Rate Tie::Indexed::Hash      Tie::IxHash         PerlHash
+Tie::Indexed::Hash 194250/s                 --              -2%             -55%
+Tie::IxHash        197278/s                 2%               --             -54%
+PerlHash           427168/s               120%             117%               --
+ ==============================================================================
+
+ ==============================================================================
+   [Exists/Defined : Small]
+ ------------------------------------------------------------------------------
+Benchmark: timing 1000000 iterations of PerlHash, Tie::Indexed::Hash, Tie::IxHash...
+  PerlHash: 2.33004 wallclock secs ( 2.325 usr +  0.000 sys =  2.325 CPU) @ 430107.527/s (n=1000000)
+Tie::Indexed::Hash: 5.03597 wallclock secs ( 5.023 usr +  0.000 sys =  5.023 CPU) @ 199084.213/s (n=1000000)
+Tie::IxHash: 5.01373 wallclock secs ( 5.007 usr +  0.000 sys =  5.007 CPU) @ 199720.391/s (n=1000000)
+ ------------------------------------------------------------------------------
+                       Rate Tie::Indexed::Hash      Tie::IxHash         PerlHash
+Tie::Indexed::Hash 199084/s                 --              -0%             -54%
+Tie::IxHash        199720/s                 0%               --             -54%
+PerlHash           430108/s               116%             115%               --
+ ==============================================================================
+
+ ==============================================================================
+   [Keys : Large]
+ ------------------------------------------------------------------------------
+Benchmark: timing 5000 iterations of PerlHash, Tie::Indexed::Hash, Tie::IxHash...
+  PerlHash: 10.8736 wallclock secs (10.873 usr +  0.000 sys = 10.873 CPU) @ 459.855/s (n=5000)
+Tie::Indexed::Hash: 43.5816 wallclock secs (43.556 usr +  0.000 sys = 43.556 CPU) @ 114.795/s (n=5000)
+Tie::IxHash: 49.4915 wallclock secs (49.468 usr +  0.000 sys = 49.468 CPU) @ 101.075/s (n=5000)
+ ------------------------------------------------------------------------------
+                    Rate       Tie::IxHash Tie::Indexed::Hash           PerlHash
+Tie::IxHash        101/s                --               -12%               -78%
+Tie::Indexed::Hash 115/s               14%                 --               -75%
+PerlHash           460/s              355%               301%                 --
+ ==============================================================================
+
+ ==============================================================================
+   [Keys : Small]
+ ------------------------------------------------------------------------------
+Benchmark: timing 1000000 iterations of PerlHash, Tie::Indexed::Hash, Tie::IxHash...
+  PerlHash: 12.171 wallclock secs (12.168 usr +  0.000 sys = 12.168 CPU) @ 82182.774/s (n=1000000)
+Tie::Indexed::Hash: 72.8312 wallclock secs (72.805 usr +  0.000 sys = 72.805 CPU) @ 13735.320/s (n=1000000)
+Tie::IxHash: 84.7064 wallclock secs (84.708 usr +  0.000 sys = 84.708 CPU) @ 11805.260/s (n=1000000)
+ ------------------------------------------------------------------------------
+                      Rate      Tie::IxHash Tie::Indexed::Hash          PerlHash
+Tie::IxHash        11805/s               --               -14%              -86%
+Tie::Indexed::Hash 13735/s              16%                 --              -83%
+PerlHash           82183/s             596%               498%                --
+ ==============================================================================
+
+ ==============================================================================
+   [Values : Large]
+ ------------------------------------------------------------------------------
+Benchmark: timing 10000 iterations of PerlHash, Tie::Indexed::Hash, Tie::IxHash...
+  PerlHash: 6.46187 wallclock secs ( 6.459 usr +  0.000 sys =  6.459 CPU) @ 1548.227/s (n=10000)
+Tie::Indexed::Hash: 127.983 wallclock secs (127.967 usr +  0.000 sys = 127.967 CPU) @ 78.145/s (n=10000)
+Tie::IxHash: 158.94 wallclock secs (158.840 usr +  0.000 sys = 158.840 CPU) @ 62.956/s (n=10000)
+ ------------------------------------------------------------------------------
+                     Rate       Tie::IxHash Tie::Indexed::Hash          PerlHash
+Tie::IxHash        63.0/s                --               -19%              -96%
+Tie::Indexed::Hash 78.1/s               24%                 --              -95%
+PerlHash           1548/s             2359%              1881%                --
+ ==============================================================================
+
+ ==============================================================================
+   [Values : Small]
+ ------------------------------------------------------------------------------
+Benchmark: timing 1000000 iterations of PerlHash, Tie::Indexed::Hash, Tie::IxHash...
+  PerlHash: 2.59157 wallclock secs ( 2.589 usr +  0.000 sys =  2.589 CPU) @ 386249.517/s (n=1000000)
+Tie::Indexed::Hash: 106.258 wallclock secs (106.221 usr +  0.000 sys = 106.221 CPU) @ 9414.334/s (n=1000000)
+Tie::IxHash: 136.35 wallclock secs (136.283 usr +  0.000 sys = 136.283 CPU) @ 7337.672/s (n=1000000)
+ ------------------------------------------------------------------------------
+                       Rate      Tie::IxHash Tie::Indexed::Hash         PerlHash
+Tie::IxHash          7338/s               --               -22%             -98%
+Tie::Indexed::Hash   9414/s              28%                 --             -98%
+PerlHash           386250/s            5164%              4003%               --
+ ==============================================================================
+
+ ==============================================================================
+   [Each : Large]
+ ------------------------------------------------------------------------------
+Benchmark: timing 500 iterations of PerlHash, Tie::Indexed::Hash, Tie::IxHash...
+  PerlHash: 1.5896 wallclock secs ( 1.560 usr +  0.000 sys =  1.560 CPU) @ 320.513/s (n=500)
+Tie::Indexed::Hash: 10.7063 wallclock secs (10.702 usr +  0.000 sys = 10.702 CPU) @ 46.720/s (n=500)
+Tie::IxHash: 14.2214 wallclock secs (14.212 usr +  0.000 sys = 14.212 CPU) @ 35.182/s (n=500)
+ ------------------------------------------------------------------------------
+                     Rate       Tie::IxHash Tie::Indexed::Hash          PerlHash
+Tie::IxHash        35.2/s                --               -25%              -89%
+Tie::Indexed::Hash 46.7/s               33%                 --              -85%
+PerlHash            321/s              811%               586%                --
+ ==============================================================================
+
+ ==============================================================================
+   [Each : Small]
+ ------------------------------------------------------------------------------
+Benchmark: timing 50000 iterations of PerlHash, Tie::Indexed::Hash, Tie::IxHash...
+  PerlHash: 1.40687 wallclock secs ( 1.419 usr +  0.000 sys =  1.419 CPU) @ 35236.082/s (n=50000)
+Tie::Indexed::Hash: 10.6244 wallclock secs (10.608 usr +  0.000 sys = 10.608 CPU) @ 4713.424/s (n=50000)
+Tie::IxHash: 13.9426 wallclock secs (13.946 usr +  0.000 sys = 13.946 CPU) @ 3585.257/s (n=50000)
+ ------------------------------------------------------------------------------
+                      Rate      Tie::IxHash Tie::Indexed::Hash          PerlHash
+Tie::IxHash         3585/s               --               -24%              -90%
+Tie::Indexed::Hash  4713/s              31%                 --              -87%
+PerlHash           35236/s             883%               648%                --
+ ==============================================================================
+
